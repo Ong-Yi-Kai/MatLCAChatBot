@@ -91,7 +91,6 @@ pure-eval==0.2.2
 pyarrow==12.0.1
 pycparser==2.21
 pydantic==1.10.9
-pydeck==0.8.1b0
 Pygments==2.15.1
 Pympler==1.0.1
 pypandoc==1.11

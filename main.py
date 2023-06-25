@@ -1,5 +1,4 @@
 import os
-import openai
 from sentence_transformers import SentenceTransformer
 import pinecone
 from langchain.chat_models import ChatOpenAI
@@ -30,7 +29,7 @@ openai.api_key = st.secrets.openai.api_key
 pinecone.init(api_key=st.secrets.pinecone.api_key, environment=st.secrets.pinecone.env)
 index = pinecone.Index(st.secrets.pinecone.index_name)
 
-llm = OpenAI(model_name="text-davinci-003")         # model used to come up with response
+llm = OpenAI(model_name="text-davinci-003", openai_api_key=st.secrets.openai.api_key)         # model used to come up with response
 model = SentenceTransformer('all-MiniLM-L6-v2')     # model used to find matches and to encode initial pdfs
 
 
