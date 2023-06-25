@@ -24,8 +24,8 @@ with st.sidebar:
         )
 
 # Credentials /  keys
-os.environ['OPENAI_API_KEY'] = st.secrets.openai.api_key
-
+# os.environ['OPENAI_API_KEY'] = st.secrets.openai.api_key
+openai.api_key = st.secrets.openai.api_key
 
 pinecone.init(api_key=st.secrets.pinecone.api_key, environment=st.secrets.pinecone.env)
 index = pinecone.Index(st.secrets.pinecone.index_name)
